@@ -1,7 +1,7 @@
 # music-app
 ## under development
 
-### A small music application that I've created when I was still learning Vue. I really wanted to learn the basic concepts of this framework, hence I decided to create something rather compact - big projects incoming ;);) 
+### A small music application that I've created when I was still learning Vue. As a huge fan of alternative music, I wanted to promote small musicians that want to get more of the publicity. If you want to get a shout out - PM ME! The list will get updated very soon, as well as the application!
 
 ## Project setup
 ```
