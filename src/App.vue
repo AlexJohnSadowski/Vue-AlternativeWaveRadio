@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <header>
-      <h1>My Music</h1>
+      <h1>Alternative Wave</h1>
     </header>
     <main>
       <section class="player">
         <h2 class="song-title">{{ current.title }} - <span>{{ current. artist }}</span></h2>
+        <div class="album" >
+          <img v-bind:src="current.img" /> 
+        </div>
       <div class="controls">
         <button class="prev" @click="prev">Prev</button>
         <button class="play" v-if="!isPlaying" @click="play">Play</button>
@@ -36,17 +39,26 @@ export default {
         {
           title: 'Miles Powers',
           artist: 'Back To Business(feat. Laundry, Kid April & Dead Chemist)',
+          img:require('./assets/avatar1.jpg'),
           src: require('./assets/Back-To-Business.mp3')
         },
         {
           title: 'Miles Powers',
           artist: 'I take A Pill (feat.Dahm)',
+          img:require('./assets/avatar1.jpg'),
           src: require('./assets/I-Take-A-Pill.mp3')
         },
         {
           title: 'strange day',
           artist: 'Disco',
+          img:require('./assets/avatar2.jpg'),
           src: require('./assets/Disco.mp3')
+        },
+        {
+          title: 'MONOLITH.EXE',
+          artist: 'Fentanyl Wings',
+          img:require('./assets/avatar3.jpg'),
+          src: require('./assets/Fentanyl Wings.mp3')
         },
       ],
       player: new Audio()
@@ -140,6 +152,18 @@ main {
   font-weight: 400;
   font-style: italic;
 }
+
+.album {
+  display:flex;
+  justify-content: center;
+  
+}
+
+.album img {
+    width: 40vh;
+    height:40vh;
+
+}
 .controls {
   display: flex;
   justify-content: center;
@@ -163,7 +187,7 @@ button:hover {
   margin: 0px 15px;
   border-radius: 8px;
   color: #FFF;
-  background-color: #395dff;
+  background-color: #059725;
 }
 .next, .prev {
   font-size: 16px;
@@ -172,7 +196,7 @@ button:hover {
   margin: 0px 15px;
   border-radius: 6px;
   color: #FFF;
-  background-color: #395dff;
+  background-color: #059725;
 }
 .playlist {
   padding: 0px 30px;
@@ -193,10 +217,10 @@ button:hover {
   cursor: pointer;
 }
 .playlist .song:hover {
-  color: #395dff;
+  color: #059725;
 }
 .playlist .song.playing {
   color: #FFF;
-  background-image: linear-gradient(to right, #0e31f3, #64bbf5);
+  background-image: linear-gradient(to right, #059725, #024d12);
 }
 </style>
